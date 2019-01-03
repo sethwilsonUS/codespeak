@@ -61,6 +61,9 @@ class App extends Component {
         'hello world': () => {
           editor.insert('console.log("Hello, World!");\r\r');
         },
+        'add comment *comment': (comment) => {
+          editor.insert(`// ${comment}\r\r`);
+        },
         'goodbye world': () => {
           editor.setValue(defaultValue);
           editor.gotoLine(3);

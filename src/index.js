@@ -72,7 +72,7 @@ class App extends Component {
       annyang.addCommands(commands);
       annyang.start();
     } else {
-      alert('Oops, looks like annyang no workie.');
+      alert('Oops, looks like annyang no workie. Try again with Chrome.');
     }
   }
   onChange(newValue) {

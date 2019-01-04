@@ -64,6 +64,9 @@ class App extends Component {
         'add comment *comment': (comment) => {
           editor.insert(`// ${comment}\r\r`);
         },
+        'create variable *var': (variable) => {
+          editor.insert(`let ${variable};`)
+        },
         'goodbye world': () => {
           editor.setValue(defaultValue);
           editor.gotoLine(3);

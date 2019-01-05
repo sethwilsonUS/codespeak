@@ -150,6 +150,7 @@ class App extends Component {
         <h1>CodeSpeak.io - Voice Programming on the Web</h1>
         <div className="row pt-3">
           <div className="col-md-2">
+            <h2>Settings</h2>
             <div className="field">
               <label>Mode:</label>
               <p className="control">

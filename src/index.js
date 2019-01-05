@@ -61,11 +61,11 @@ class App extends Component {
         'hello world': () => {
           editor.insert('console.log("Hello, World!");\r\r');
         },
-        'add comment *comment': (comment) => {
+        'create comment *comment': (comment) => {
           editor.insert(`// ${comment}\r\r`);
         },
         'create variable *var': (variable) => {
-          editor.insert(`let ${variable};`)
+          editor.insert(`let ${variable};\r\r`)
         },
         'goodbye world': () => {
           editor.setValue(defaultValue);

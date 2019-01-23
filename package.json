@@ -11,7 +11,7 @@
     "react-ace": "^6.3.2",
     "react-dom": "^16.7.0",
     "react-scripts": "^2.1.3",
-    "reactstrap": "^7.0.2"
+    "reactstrap": "^7.1.0"
   },
   "scripts": {
     "start": "react-scripts start",

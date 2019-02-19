@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Consumer } from '../context';
 import AceEditor from 'react-ace';
+import python from '../commands/python'
 import 'brace/mode/jsx';
 import 'brace/ext/language_tools';
 import 'brace/ext/searchbox';
@@ -47,8 +48,6 @@ themes.forEach(theme => {
   require(`brace/theme/${theme}`);
 });
 
-const defaultValue = '# speak some commands!\n\n';
-
 export default class Editor extends Component {
 
   constructor(props) {
@@ -63,24 +62,7 @@ export default class Editor extends Component {
 
     const editor = this.editorRef.current.editor;
     if (annyang) {
-      const commands = {
-        'hello world': () => {
-          editor.insert('print("Hello, world!")');
-          editor.insert('\n');
-          editor.insert('\n');
-        },
-        'comment *comment': (comment) => {
-          editor.insert(`# ${comment}\r\r`);
-        },
-        'create variable *var': (variable) => {
-          editor.insert(`${variable} = `)
-        },
-        'goodbye world': () => {
-          editor.setValue(defaultValue);
-          editor.gotoLine(3);
-        }
-      };
-      annyang.addCommands(commands);
+      annyang.addCommands(python(editor));
       annyang.start();
     } else {
       alert('Oops, looks like annyang no workie. Try again with Chrome.');

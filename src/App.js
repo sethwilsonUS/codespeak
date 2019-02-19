@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Provider } from './context';
 import Editor from './components/Editor';
 import Sidebar from './components/Sidebar';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends Component {
 

@@ -113,7 +113,7 @@ export default class Editor extends Component {
       <Consumer>
         {settings => {
           return (
-            <div className="example">
+            <div className="example col-sm-9">
               <AceEditor
                 ref={this.editorRef}
                 width={'100%'}

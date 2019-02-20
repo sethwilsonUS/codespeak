@@ -65,7 +65,7 @@ export default class Editor extends Component {
       annyang.addCommands(python(editor));
       annyang.start();
     } else {
-      alert('Oops, looks like annyang no workie. Try again with Chrome.');
+      alert('Oops, looks like your browser doesn\'t yet support Speech Recognition. Try again with Chrome.');
     }
   }
 

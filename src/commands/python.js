@@ -28,7 +28,7 @@ const python = editor => {
         const boolean = value.charAt(0).toUpperCase() + value.slice(1);
         editor.insert(`${boolean}`);
       } else {
-        editor.insert(`'${value}'`);
+        editor.insert(`'${value.replace('\'', '\\\'')}'`);
       }
       editor.insert('\n');
     },

@@ -54,12 +54,14 @@ export default class Editor extends Component {
     super(props);
     this.editorRef = React.createRef();
     this.state = {
+      loading: true,
       value: '# lets do some Python!\n\n'
     };
   }
 
   componentDidMount() {
 
+    this.setState({loading: false})
     const editor = this.editorRef.current.editor;
     if (annyang) {
       annyang.addCommands(python(editor));

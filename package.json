@@ -4,13 +4,13 @@
   "private": true,
   "dependencies": {
     "annyang": "^2.6.1",
-    "bootstrap": "^4.2.1",
+    "bootstrap": "^4.3.1",
     "jquery": "^3.3.1",
     "popper": "^1.0.1",
-    "react": "^16.8.1",
+    "react": "^16.8.4",
     "react-ace": "^6.4.0",
-    "react-dom": "^16.8.1",
-    "react-scripts": "^2.1.5",
+    "react-dom": "^16.8.4",
+    "react-scripts": "^2.1.8",
     "reactstrap": "^7.1.0"
   },
   "scripts": {

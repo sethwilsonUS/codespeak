@@ -1,44 +1,55 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Welcome to CodeSpeak!
 
-## Available Scripts
+CodeSpeak is a web-based code editor that lets users code with the power of their voice. It's currently in an embryonic stage, but my intent is to grow the product into a mature, multi-language tool.
 
-In the project directory, you can run:
+# Getting Started
 
-### `npm start`
+The live version of CodeSpeak can be found at https://codespeak.io - or you can clone this repository and run it locally.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+CodeSpeak uses the Speech Recognition API, which currently works best in Google Chrome. Most other browsers don't support it at all, or support it only partially, but its adoption is growing, so CodeSpeak should work on other browsers soon.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+CodeSpeak also works best using HTTPS. This is enforced on codespeak.io, but if you decide to run it locally you may need to use the following command to make things work right:
 
-### `npm test`
+- **Windows (cmd.exe)**: `set HTTPS=true&&npm start`
+- **Windows (PowerShell)**: `($env:HTTPS = "true") -and (npm start)`
+- **Mac/Linux**: `HTTPS=true npm start`
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+And, running locally, you'll still need to proceed past the usual "This site is unsafe" warnings.
 
-### `npm run build`
+# Commands
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+As I said, CodeSpeak is in its embryonic stage. Right now it only supports Python, and only has a limited number of commands:
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+- **"Hello world."**: enters the obligatory `print('Hello world')` command.
+- **"Create function [function name]"**: Creates a `def function_name():` stub, with no arguments yet.
+- **"Create variable [variable name]"**: Creates a variable with the specified name.
+- **"Set value [variable value]""**: Sets the value of the created variable.
+- **"Goodbye world."**: clears the editor window.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+More commands and functionality coming soon, promise!
 
-### `npm run eject`
+# Technology
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+CodeSpeak is built on the following technologies:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **React**: This is overkill right now for what CodeSpeak is/does, but I hope it will give me room to scale the app as it grows.
+- **React Ace**: A react implementation of the Ace editor, created by Cloud9. This is the WYSIWYG editor interface.
+- **annyang**: This is the JavaScript speech engine that powers CodeSpeak.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+# TODO
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Everything! But here's a short list:
 
-## Learn More
+- **More commands**: Need to add enough Python commands to at least allow a user to write a very simple program entirely by voice.
+- **UI/UX** I'm not great at UI, but I know it needs some work.
+- **Save/share functionality**: Save code snippet to file, share as gist, etc.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+More ambitious goals:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **Other languages**: I'd like to have this working in other languages besides Python.
+- **Integrated interpreter**: I'd like users to be able to actually run their code snippets in the browser.
+- **Text-to-speech**: The flip side of speech-to-text, I'd like the editor to be able to give verbal output.
+
+# Contributing
+
+Yes please! This is my first open-source project, and, I'll be honest, I don't quite know what I'm doing. So help on any level would be greatly appreciated!

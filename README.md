@@ -8,6 +8,8 @@ The live version of CodeSpeak can be found at https://codespeak.io - or you can 
 
 CodeSpeak uses the Speech Recognition API, which currently works best in Google Chrome. Most other browsers don't support it at all, or support it only partially, but its adoption is growing, so CodeSpeak should work on other browsers soon.
 
+To set up locally, simply clone this repository and run `npm install` from its root directory.
+
 CodeSpeak also works best using HTTPS. This is enforced on codespeak.io, but if you decide to run it locally you may need to use the following command to make things work right:
 
 - **Windows (cmd.exe)**: `set HTTPS=true&&npm start`

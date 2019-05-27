@@ -2,6 +2,8 @@
 
 CodeSpeak is a web-based code editor that lets users code with the power of their voice. It's currently in an embryonic stage, but my intent is to grow the product into a mature, multi-language tool.
 
+I'm a legally blind software engineer, and although CodeSpeak isn't ready for prime-time yet, my hope is that tools like this will aid developers from all walks of life.
+
 # Getting Started
 
 The live version of CodeSpeak can be found at https://codespeak.io - or you can clone this repository and run it locally.
